@@ -1,7 +1,9 @@
 .about__container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 3rem;
 }
 .about__content{
     display: flex;
