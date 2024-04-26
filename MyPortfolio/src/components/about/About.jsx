@@ -14,7 +14,7 @@ function About() {
                       I am deeply fascinated by the science of computing, its origins, workings, and future prospects. I enjoy problem-solving and strive to enhance my experience by engaging with various technologies. My curiosity about AI drives me to explore its potential and applications. I am eager to apply my knowledge and skills in a practical setting, contributing to innovative solutions and learning from real-world challenges.                  </p>
               </article>
           </div>
-            <a href="mailto:remlioussama@gmail.com" className='btn btn-primary'>Contact me</a>
+            <a href="MyPortfolio/static/Resume-An.pdf" className='btn btn-primary' download="Oussama_Remli.pdf">My resume</a>
         </div>
        
     </section>

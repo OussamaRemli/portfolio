@@ -19,16 +19,10 @@ function Portfolio() {
               <a href="https://github.com/OussamaRemli/WonderLab/tree/master" className="btn"> Github </a>
             </div>
         </article>
-
         <article className='portfolio__item'>
           <div className="portfolio__item-image">
             <img src={IMG2} alt=""/>
           </div>
-          <h3>To-do-list</h3>
-          <small className='text-light'>designed and implemented a dynamic to-do list application using React.js</small>
-          <div className="portfolio__item-cta">
-              <a href="https://github.com" className="btn"> Github </a>
-            </div>
         </article>
 
     </div>
