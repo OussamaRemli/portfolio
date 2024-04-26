@@ -19,12 +19,6 @@ function Portfolio() {
               <a href="https://github.com/OussamaRemli/WonderLab/tree/master" className="btn"> Github </a>
             </div>
         </article>
-        <article className='portfolio__item'>
-          <div className="portfolio__item-image">
-            <img src={IMG2} alt=""/>
-          </div>
-        </article>
-
     </div>
 
     </section>
