@@ -36,7 +36,8 @@
     "swiper": "^11.1.14",
     "tsparticles": "^3.5.0",
     "typewriter-effect": "^2.18.2",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "xxxx": "^3.0.4"
   },
   "scripts": {
     "start": "react-scripts start",
