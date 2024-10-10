@@ -399,20 +399,7 @@ button:focus {
 /* --------- */
 /* Footer */
 /* --------- */
-.footer {
-  background-color: rgb(10, 4, 22);
-  bottom: 0 !important;
-  padding-top: 10px !important;
-  padding-bottom: 8px !important ;
-}
-.footer-copywright {
-  text-align: center !important;
-}
 
-.footer-body {
-  z-index: 1;
-  text-align: center !important;
-}
 
 @media (max-width: 767px) {
   .footer-copywright {
@@ -610,7 +597,7 @@ button:focus {
   position: relative !important;
   padding-top: 110px !important;
   padding-bottom: 30px !important;
-  background-image: var(--section-background-color) !important;
+  background-image: #1e797d !important;
   color: white !important;
 }
 
