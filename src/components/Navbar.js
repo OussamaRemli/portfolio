@@ -100,7 +100,7 @@ function NavBar() {
 
             <Nav.Item className="fork-btn">
               <Button
-                // href="src\Assets\Soumyajit_Behera-BIT_MESRA.pdf" // Path to your PDF file
+                href="/CV.pdf" // Path to your PDF file
                 download="resume.pdf"
                 target="_blank"
                 className="fork-btn-inner"
