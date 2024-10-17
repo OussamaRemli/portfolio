@@ -83,7 +83,7 @@ function Projects() {
               />
             </motion.div>
           </Col>
-          <Col md={4} className="project-card">
+          {/* <Col md={4} className="project-card">
             <motion.div variants={projectCardVariants}>
               <ProjectCard
                 imgPath={project2}
@@ -94,7 +94,7 @@ function Projects() {
                 techStack={["Android", "Firebase"]}
               />
             </motion.div>
-          </Col>
+          </Col> */}
 
           {/* Project 3 */}
           <Col md={4} className="project-card">
