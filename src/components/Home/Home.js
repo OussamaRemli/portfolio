@@ -70,7 +70,7 @@ function Home() {
                   style={{ display: "inline-block", marginRight: "20px" }}
                 >
                   <a
-                    href="https://www.linkedin.com/in/oussamaremli"
+                    href="https://www.linkedin.com/in/oussremli247"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
