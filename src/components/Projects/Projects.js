@@ -7,7 +7,7 @@ import project2 from "../../Assets/Projects/projet2.png";
 import project3 from "../../Assets/Projects/projet3.png";
 import project4 from "../../Assets/Projects/projet4.png";
 import project5 from "../../Assets/Projects/projet5.png";
-import adm1 from "../../Assets/Projects/ADM (1).png"
+import adm1 from "../../Assets/Projects/ADM (1).png";
 import adm2 from "../../Assets/Projects/ADM (2).png";
 import adm3 from "../../Assets/Projects/ADM (3).png";
 import adm4 from "../../Assets/Projects/ADM (4).png";
@@ -47,10 +47,12 @@ function Projects() {
     >
       <Container fluid>
         <motion.h1 className="project-heading" variants={headingVariants}>
-          My Recent <strong className="purple">Works</strong>
+          Recent{" "}
+          <strong className="purple">Academic & Professional Projects</strong>
         </motion.h1>
         <motion.p style={{ color: "white" }} variants={headingVariants}>
-          Here are a few projects I've worked on recently.
+          Below are some of the academic and professional projects I’ve worked
+          on.
         </motion.p>
 
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
@@ -86,9 +88,9 @@ function Projects() {
               <ProjectCard
                 imgPath={project5}
                 isBlog={false}
-                title="SchoolReg "
+                title="Student Management System"
                 description="I developed a desktop application using JavaFX to manage student registrations for a school. The application allows administrators to add, update, and manage student information efficiently through an intuitive graphical interface. This project helped me strengthen my skills in Java, particularly in building desktop applications with JavaFX, handling user input, and creating dynamic UI components. Additionally, I gained experience in managing data persistence and ensuring smooth user interactions within a desktop environment. This project enhanced my understanding of object-oriented programming and GUI development."
-                ghLink="https://github.com/MouadMakkour/BlogApp"
+                ghLink="https://github.com/OussamaRemli/Student-Management-System"
                 techStack={["java"]}
               />
             </motion.div>
@@ -136,7 +138,16 @@ function Projects() {
                 isBlog={false}
                 title="ADM projet"
                 imgPaths={[
-                  adm1, adm2, adm3, adm4, adm5, adm6, adm7, adm8, adm9, adm10,
+                  adm1,
+                  adm2,
+                  adm3,
+                  adm4,
+                  adm5,
+                  adm6,
+                  adm7,
+                  adm8,
+                  adm9,
+                  adm10,
                 ]}
                 description="During my summer internship, I contributed to a project focused on managing infrastructure projects for a highway company. The application was developed to facilitate the oversight and tracking of procedures related to highway construction, ensuring efficient management of project timelines and milestones. I utilized React combined with MUI to create an intuitive and responsive user interface, while Spring Boot served as the backbone for our backend services. A MySQL database was employed to manage project data and monitor progress effectively. We also utilized Azure for deployment, ensuring a scalable and reliable environment for our application. This role provided me with valuable insights into full-stack development, project tracking methodologies, and the operational challenges within the infrastructure sector."
                 ghLink="https://github.com/RezBadr/app-gestion-suivi-des-projets"
