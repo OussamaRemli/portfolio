@@ -7,7 +7,16 @@ import project2 from "../../Assets/Projects/projet2.png";
 import project3 from "../../Assets/Projects/projet3.png";
 import project4 from "../../Assets/Projects/projet4.png";
 import project5 from "../../Assets/Projects/projet5.png";
-
+import adm1 from "../../Assets/Projects/ADM (1).png"
+import adm2 from "../../Assets/Projects/ADM (2).png";
+import adm3 from "../../Assets/Projects/ADM (3).png";
+import adm4 from "../../Assets/Projects/ADM (4).png";
+import adm5 from "../../Assets/Projects/ADM (5).png";
+import adm6 from "../../Assets/Projects/ADM (6).png";
+import adm7 from "../../Assets/Projects/ADM (7).png";
+import adm8 from "../../Assets/Projects/ADM (8).png";
+import adm9 from "../../Assets/Projects/ADM (9).png";
+import adm10 from "../../Assets/Projects/ADM (10).png";
 // Animation Variants
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -52,6 +61,7 @@ function Projects() {
                 imgPath={project1}
                 isBlog={false}
                 title="WonderLab"
+                demoLink="https://drive.google.com/file/d/1NpPNqJuVzS2QPKlPiqFRO9tre3bBX5Iy/view?usp=sharing"
                 description="Wonderlab is a dynamic blogging platform designed specifically for science enthusiasts to discover, share, and engage with posts related to various scientific topics. Built using HTML, CSS, and native PHP, with a MySQL database, Wonderlab provides users the ability to post articles, share updates, and comment on the latest scientific trends. This project played a crucial role in deepening my understanding of several core web development concepts, including database management, front-end styling with CSS, and the fundamentals of server-side programming with PHP"
                 ghLink="https://github.com/OussamaRemli/WonderLab/tree/master"
                 techStack={["HTML", "CSS", "PHP", "MySQL"]} // Tech stack icons
@@ -105,6 +115,7 @@ function Projects() {
                 title="QRABS"
                 description="For my PFA, I developed a web-based absence management application that integrates QR code scanning and facial recognition technology to streamline the process of tracking student attendance. The application is designed to be user-friendly and efficient, catering to administrators, professors, and students. Administrators can manage departments, schedules, and track absences, while professors can record and review attendance data in real-time. Students register their presence using QR codes or facial recognition, enhancing both accuracy and speed.The project uses a microservices architecture, integrating the facial recognition module via Flask, while the backend is built using Spring Boot, the frontend with React.js, and data stored in MySQL/SQLite. This solution addresses the inefficiencies of manual attendance management, offering a more reliable and automated system for educational institutions, and exemplifies my ability to design and implement full-stack solutions with modern technologies."
                 ghLink="https://github.com/OussamaRemli/QRABS"
+                demoLink="https://www.linkedin.com/posts/activity-7232040563653443586-HH4W?utm_source=share&utm_medium=member_desktop"
                 techStack={[
                   "React",
                   "Material UI",
@@ -124,6 +135,9 @@ function Projects() {
                 imgPath={project3}
                 isBlog={false}
                 title="ADM projet"
+                imgPaths={[
+                  adm1, adm2, adm3, adm4, adm5, adm6, adm7, adm8, adm9, adm10,
+                ]}
                 description="During my summer internship, I contributed to a project focused on managing infrastructure projects for a highway company. The application was developed to facilitate the oversight and tracking of procedures related to highway construction, ensuring efficient management of project timelines and milestones. I utilized React combined with MUI to create an intuitive and responsive user interface, while Spring Boot served as the backbone for our backend services. A MySQL database was employed to manage project data and monitor progress effectively. We also utilized Azure for deployment, ensuring a scalable and reliable environment for our application. This role provided me with valuable insights into full-stack development, project tracking methodologies, and the operational challenges within the infrastructure sector."
                 ghLink="https://github.com/RezBadr/app-gestion-suivi-des-projets"
                 techStack={[

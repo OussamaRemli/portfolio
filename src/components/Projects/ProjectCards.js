@@ -3,6 +3,11 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { CgWebsite } from "react-icons/cg";
 import { BsGithub } from "react-icons/bs";
+import { Modal } from "react-bootstrap";
+import { Swiper, SwiperSlide } from "swiper/react"; 
+import { Navigation } from "swiper/modules"; // Ensure this is imported
+import 'swiper/css'; // Import Swiper CSS
+import 'swiper/css/navigation'; // Import Swiper navigation CSS
 import {
   SiReact,
   SiNodeDotJs,
@@ -12,16 +17,73 @@ import {
   SiPhp,
   SiSpringboot,
 } from "react-icons/si"; // Simple Icons from react-icons/si
+const zoomStyle = {
+  width: "100px",
+  height: "100px",
+  objectFit: "cover",
+  borderRadius: "8px",
+  marginRight: "10px",
+  cursor: "pointer",
+  transition: "transform 0.3s ease-in-out",
+};
+
+const swiperButtonStyle = {
+  color: 'rgba(128, 128, 128, 0.7)',  // Gray with transparency
+  backgroundColor: 'transparent',     // No background
+  border: 'none',
+  fontSize: '20px',
+  width: 'auto',
+  height: 'auto',
+  transition: 'color 0.3s ease',
+};
+
+// Ensure hover effect to make buttons more visible on interaction
+const swiperButtonHoverStyle = {
+  color: 'rgba(128, 128, 128, 0.9)',
+};
 
 function ProjectCards(props) {
   const [isExpanded, setIsExpanded] = useState(false);
-  const toggleExpand = () => setIsExpanded(!isExpanded);
+  const [showModal, setShowModal] = useState(false);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
-  // Limit the text length, only showing part of it initially
+  const toggleExpand = () => setIsExpanded(!isExpanded);
   const textPreview = isExpanded
     ? props.description
     : props.description.slice(0, 100) +
       (props.description.length > 100 ? "..." : "");
+
+  const imgPaths = props.imgPaths || [];
+  const thumbnail = props.thumbnail; // New prop for the miniature image
+
+  const handlePreviewClick = () => {
+    setSelectedImageIndex(0); // Default to the first image
+    setShowModal(true); // Open modal
+  };
+
+  const renderMiniature = () => {
+    if (!thumbnail) return null; // Return nothing if no thumbnail is provided
+
+    // Render the thumbnail image as a miniature
+    return (
+      <div style={{ textAlign: "center", marginBottom: "15px" }}>
+        <img
+          src={thumbnail} // Use the new thumbnail image
+          alt="project-thumbnail"
+          style={{
+            width: "100%", // Full width
+            height: "200px", // Fixed height
+            objectFit: "cover", // Maintain aspect ratio
+            borderRadius: "8px",
+            cursor: "pointer",
+          }}
+          onClick={handlePreviewClick} // Open modal on click
+        />
+      </div>
+    );
+  };
+
+  const handleClose = () => setShowModal(false);
 
   return (
     <Card
@@ -33,18 +95,13 @@ function ProjectCards(props) {
         transition: "transform 0.2s ease-in-out",
       }}
     >
-      {/* <Card.Img
-        variant="top"
-        src={props.imgPath}
-        alt="card-img"
-        style={{ maxHeight: "200px", objectFit: "cover" }}
-      /> */}
+      {renderMiniature()} {/* Render the separate thumbnail */}
+
       <Card.Body style={{ padding: "20px" }}>
         <Card.Title style={{ fontWeight: "bold", fontSize: "1.5rem" }}>
           {props.title}
         </Card.Title>
 
-        {/* Project description with "Read More" feature */}
         <Card.Text style={{ textAlign: "justify", marginBottom: "15px" }}>
           {textPreview}
           {props.description.length > 100 && (
@@ -61,8 +118,8 @@ function ProjectCards(props) {
           )}
         </Card.Text>
 
-        {/* Tech Stack Section */}
-        <div
+   {/* Tech Stack Section */}
+   <div
           style={{
             display: "flex",
             justifyContent: "center",
@@ -196,12 +253,10 @@ function ProjectCards(props) {
           {/* Add more tech icons as per the project */}
         </div>
 
-        <div
-          style={{
-            display: "flex",
-            justifyContent: props.demoLink ? "space-between" : "center",
-          }}
-        >
+        <div style={{
+          display: "flex",
+          justifyContent: props.demoLink ? "space-between" : "center",
+        }}>
           <Button
             variant="primary"
             href={props.ghLink}
@@ -211,7 +266,6 @@ function ProjectCards(props) {
             <BsGithub /> &nbsp; {props.isBlog ? "Blog" : "GitHub"}
           </Button>
 
-          {/* Render Demo Button only if not a Blog and if demo link is provided */}
           {!props.isBlog && props.demoLink && (
             <Button
               variant="outline-primary"
@@ -226,10 +280,79 @@ function ProjectCards(props) {
               <CgWebsite /> &nbsp; Demo
             </Button>
           )}
+
+          {/* Add a Preview button */}
+          {imgPaths.length > 0 && (
+            <Button
+              variant="outline-secondary"
+              onClick={handlePreviewClick}
+              style={{
+                marginLeft: "10px",
+                borderRadius: "20px",
+                padding: "10px 20px",
+              }}
+            >
+              Preview
+            </Button>
+          )}
         </div>
       </Card.Body>
+
+      <Modal show={showModal} onHide={handleClose} size="lg" centered>
+        <Modal.Header closeButton>
+          <Modal.Title>Project Images</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Swiper
+            spaceBetween={10}
+            slidesPerView={1}
+            navigation={true}
+            loop={true}
+            modules={[Navigation]}
+            initialSlide={selectedImageIndex}
+            onSwiper={(swiper) => {
+              // Apply custom styles to navigation buttons
+              const nextButton = swiper.el.querySelector(".swiper-button-next");
+              const prevButton = swiper.el.querySelector(".swiper-button-prev");
+
+              if (nextButton) {
+                Object.assign(nextButton.style, swiperButtonStyle);
+                nextButton.addEventListener('mouseover', () => Object.assign(nextButton.style, swiperButtonHoverStyle));
+                nextButton.addEventListener('mouseout', () => Object.assign(nextButton.style, swiperButtonStyle));
+              }
+
+              if (prevButton) {
+                Object.assign(prevButton.style, swiperButtonStyle);
+                prevButton.addEventListener('mouseover', () => Object.assign(prevButton.style, swiperButtonHoverStyle));
+                prevButton.addEventListener('mouseout', () => Object.assign(prevButton.style, swiperButtonStyle));
+              }
+            }}
+          >
+            {imgPaths.map((img, index) => (
+              <SwiperSlide key={index}>
+                <img
+                  src={img}
+                  alt={`project-img-modal-${index}`}
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                    objectFit: "cover",
+                    borderRadius: "8px",
+                    cursor: "pointer",
+                  }}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </Modal.Body>
+      </Modal>
     </Card>
   );
 }
+
+ProjectCards.defaultProps = {
+  imgPaths: [],
+  thumbnail: "", // Default to an empty string if no thumbnail is provided
+};
 
 export default ProjectCards;
