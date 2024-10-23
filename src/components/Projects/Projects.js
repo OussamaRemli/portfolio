@@ -17,6 +17,8 @@ import adm7 from "../../Assets/Projects/ADM (7).png";
 import adm8 from "../../Assets/Projects/ADM (8).png";
 import adm9 from "../../Assets/Projects/ADM (9).png";
 import adm10 from "../../Assets/Projects/ADM (10).png";
+import adm11 from "../../Assets/Projects/ADM (11).png";
+
 // Animation Variants
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -148,6 +150,7 @@ function Projects() {
                   adm8,
                   adm9,
                   adm10,
+                  adm11
                 ]}
                 description="During my summer internship, I contributed to a project focused on managing infrastructure projects for a highway company. The application was developed to facilitate the oversight and tracking of procedures related to highway construction, ensuring efficient management of project timelines and milestones. I utilized React combined with MUI to create an intuitive and responsive user interface, while Spring Boot served as the backbone for our backend services. A MySQL database was employed to manage project data and monitor progress effectively. We also utilized Azure for deployment, ensuring a scalable and reliable environment for our application. This role provided me with valuable insights into full-stack development, project tracking methodologies, and the operational challenges within the infrastructure sector."
                 ghLink="https://github.com/RezBadr/app-gestion-suivi-des-projets"
