@@ -94,7 +94,7 @@ function Techstack() {
         </OverlayTrigger>
       </SwiperSlide>
       <SwiperSlide>
-        <OverlayTrigger placement="top" overlay={renderTooltip("Node.js")}>
+        <OverlayTrigger placement="top" overlay={renderTooltip("angular")}>
           <Col xs={4} md={2} className="tech-icons">
             <i className="devicon-angular-plain"></i>
           </Col>
@@ -108,7 +108,7 @@ function Techstack() {
         </OverlayTrigger>
       </SwiperSlide>
       <SwiperSlide>
-        <OverlayTrigger placement="top" overlay={renderTooltip("MySQL")}>
+        <OverlayTrigger placement="top" overlay={renderTooltip("mongodb")}>
           <Col xs={4} md={2} className="tech-icons">
             <i class="devicon-mongodb-plain"></i>
           </Col>
