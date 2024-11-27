@@ -5,7 +5,13 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper/modules";
+import {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  Autoplay,
+} from "swiper/modules";
 
 function Techstack() {
   // Function to render a tooltip
@@ -90,7 +96,7 @@ function Techstack() {
       <SwiperSlide>
         <OverlayTrigger placement="top" overlay={renderTooltip("Node.js")}>
           <Col xs={4} md={2} className="tech-icons">
-            <i className="devicon-nodejs-plain-wordmark"></i>
+            <i className="devicon-angular-plain"></i>
           </Col>
         </OverlayTrigger>
       </SwiperSlide>
@@ -98,6 +104,13 @@ function Techstack() {
         <OverlayTrigger placement="top" overlay={renderTooltip("MySQL")}>
           <Col xs={4} md={2} className="tech-icons">
             <i className="devicon-mysql-plain-wordmark"></i>
+          </Col>
+        </OverlayTrigger>
+      </SwiperSlide>
+      <SwiperSlide>
+        <OverlayTrigger placement="top" overlay={renderTooltip("MySQL")}>
+          <Col xs={4} md={2} className="tech-icons">
+            <i class="devicon-mongodb-plain"></i>
           </Col>
         </OverlayTrigger>
       </SwiperSlide>
