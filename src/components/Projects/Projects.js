@@ -18,8 +18,8 @@ import adm8 from "../../Assets/Projects/ADM (8).png";
 import adm9 from "../../Assets/Projects/ADM (9).png";
 import adm10 from "../../Assets/Projects/ADM (10).png";
 import adm11 from "../../Assets/Projects/ADM (11).png";
-import screen_1 from "../../Assets/Projects/screen_1.jpeg";
-import screen_2 from "../../Assets/Projects/screen_2.jpeg";
+import screen_1 from "../../Assets/Projects/screen_1.png";
+import screen_2 from "../../Assets/Projects/screen_2.png";
 import { SiFirebase } from "react-icons/si";
 
 
