@@ -18,6 +18,11 @@ import adm8 from "../../Assets/Projects/ADM (8).png";
 import adm9 from "../../Assets/Projects/ADM (9).png";
 import adm10 from "../../Assets/Projects/ADM (10).png";
 import adm11 from "../../Assets/Projects/ADM (11).png";
+import screen_1 from "../../Assets/Projects/screen_1.jpeg";
+import screen_2 from "../../Assets/Projects/screen_2.jpeg";
+import { SiFirebase } from "react-icons/si";
+
+
 ///
 
 // Animation Variants
@@ -95,6 +100,20 @@ function Projects() {
                 description="I developed a desktop application using JavaFX to manage student registrations for a school. The application allows administrators to add, update, and manage student information efficiently through an intuitive graphical interface. This project helped me strengthen my skills in Java, particularly in building desktop applications with JavaFX, handling user input, and creating dynamic UI components. Additionally, I gained experience in managing data persistence and ensuring smooth user interactions within a desktop environment. This project enhanced my understanding of object-oriented programming and GUI development."
                 ghLink="https://github.com/OussamaRemli/Student-Management-System"
                 techStack={["java"]}
+              />
+            </motion.div>
+          </Col>
+          <Col md={4} className="project-card">
+            <motion.div variants={projectCardVariants}>
+              <ProjectCard
+                imgPath={project5}
+                isBlog={false}
+                title="Weather App"
+                description="Weather App is an Android application that provides real-time weather information for any city. The app uses the WeatherAPI to fetch current weather conditions and forecasts, and integrates Firebase Realtime Database for data persistence."
+                ghLink="https://github.com/OussamaRemli/WeatherApp.git"
+                techStack={["java","Android","Firebase"]}
+                imgPaths={[screen_2,screen_1]}
+                
               />
             </motion.div>
           </Col>
