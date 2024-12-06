@@ -18,9 +18,12 @@ function Toolstack() {
     { name: "VS Code", icon: "devicon-vscode-plain" },
     { name: "IntelliJ IDEA", icon: "devicon-intellij-plain" },
     { name: "Eclipse", icon: "devicon-eclipse-plain" },
+    { name: "Android Studio", icon: "devicon-androidstudio-plain" },
+
     { name: "Postman", icon: "devicon-postman-plain" },
     { name: "Linux", icon: "devicon-linux-plain" },
     { name: "GitHub", icon: "devicon-github-original" },
+
   ];
 
   return (
@@ -60,6 +63,7 @@ function Toolstack() {
             </Col>
           </OverlayTrigger>
         </SwiperSlide>
+        
       ))}
     </Swiper>
   );
