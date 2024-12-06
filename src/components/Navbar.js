@@ -98,7 +98,7 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item> */}
 
-            <Nav.Item className="fork-btn">
+            {/* <Nav.Item className="fork-btn">
               <Button
                 href="/CV.pdf" // Path to your PDF file
                 download="resume.pdf"
@@ -110,7 +110,7 @@ function NavBar() {
                   style={{ fontSize: "1.2em", marginLeft: "0.2rem" }}
                 />{" "}
               </Button>
-            </Nav.Item>
+            </Nav.Item> */}
           </Nav>
         </Navbar.Collapse>
       </Container>
