@@ -101,6 +101,14 @@ function Techstack() {
         </OverlayTrigger>
       </SwiperSlide>
       <SwiperSlide>
+        <OverlayTrigger placement="top" overlay={renderTooltip("angular")}>
+          <Col xs={4} md={2} className="tech-icons">
+            <i class="devicon-android-plain"></i>
+          </Col>
+        </OverlayTrigger>
+      </SwiperSlide>
+
+      <SwiperSlide>
         <OverlayTrigger placement="top" overlay={renderTooltip("MySQL")}>
           <Col xs={4} md={2} className="tech-icons">
             <i className="devicon-mysql-plain-wordmark"></i>
