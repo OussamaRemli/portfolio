@@ -101,7 +101,7 @@ function Techstack() {
         </OverlayTrigger>
       </SwiperSlide>
       <SwiperSlide>
-        <OverlayTrigger placement="top" overlay={renderTooltip("angular")}>
+        <OverlayTrigger placement="top" overlay={renderTooltip("Android")}>
           <Col xs={4} md={2} className="tech-icons">
             <i class="devicon-android-plain"></i>
           </Col>
