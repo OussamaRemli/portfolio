@@ -79,19 +79,8 @@ function Projects() {
             </motion.div>
           </Col>
           {/* Project 2 */}
-          <Col md={4} className="project-card">
-            <motion.div variants={projectCardVariants}>
-              <ProjectCard
-                imgPath={project4}
-                isBlog={false}
-                title="BlogApp"
-                description="I developed a blogging application using Node.js for the backend and React for the frontend. The app allows users to create, edit, and manage blogs, providing a platform for content sharing. This project helped me solidify my understanding of the fundamentals of Node.js, including server-side development, API creation, and handling database operations. On the frontend, working with React improved my skills in building dynamic and responsive user interfaces. Through this experience, I gained practical knowledge in full-stack development, RESTful API integration, and managing data flows between the client and server."
-                ghLink="https://github.com/MouadMakkour/BlogApp"
-                techStack={["React", "Node.js"]}
-              />
-            </motion.div>
-          </Col>
-          <Col md={4} className="project-card">
+   
+          {/* <Col md={4} className="project-card">
             <motion.div variants={projectCardVariants}>
               <ProjectCard
                 imgPath={project5}
@@ -102,7 +91,8 @@ function Projects() {
                 techStack={["java"]}
               />
             </motion.div>
-          </Col>
+          </Col> */}
+      -
           <Col md={4} className="project-card">
             <motion.div variants={projectCardVariants}>
               <ProjectCard
@@ -173,7 +163,7 @@ function Projects() {
                   adm10,
                 ]}
                 description="During my summer internship, I contributed to a project focused on managing infrastructure projects for a highway company. The application was developed to facilitate the oversight and tracking of procedures related to highway construction, ensuring efficient management of project timelines and milestones. I utilized React combined with MUI to create an intuitive and responsive user interface, while Spring Boot served as the backbone for our backend services. A MySQL database was employed to manage project data and monitor progress effectively. We also utilized Azure for deployment, ensuring a scalable and reliable environment for our application. This role provided me with valuable insights into full-stack development, project tracking methodologies, and the operational challenges within the infrastructure sector."
-                ghLink="https://github.com/RezBadr/app-gestion-suivi-des-projets"
+                // ghLink="https://github.com/RezBadr/app-gestion-suivi-des-projets"
                 techStack={[
                   "React",
                   "Material UI",
